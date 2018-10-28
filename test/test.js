@@ -34,8 +34,22 @@ describe('recursion()',function(){
 });*/
 describe('sumOfOther',function(){
   it('should return sum of other element of array',function(){
+  var arr=[2,4,5,1,3,8];
+  var result=sumOfOther.sumOfOther(arr);
+  assert.deepEqual(result,[21,19,18,22,20,15]);
+    });
+});
+describe('sumOfOther',function(){
+  it('should return sum of other element of array',function(){
+  var arr=[2,4,5,1,3,5,3,11];
+  var result=sumOfOther.sumOfOther(arr);
+  assert.deepEqual(result,[32,30,29,33,31,29,31,23]);
+    });
+});
+describe('sumOfOther',function(){
+  it('should return sum of other element of array',function(){
   var arr=[2,4,5,1,3,52,3];
   var result=sumOfOther.sumOfOther(arr);
-  assert.deepEqual(result,70);
+  assert.deepEqual(result,[68,66,65,69,67,18,67]);
     });
 });

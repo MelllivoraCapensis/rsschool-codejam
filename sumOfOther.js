@@ -1,7 +1,10 @@
 module.exports={
 	sumOfOther:(array)=>{
-		return array.reduce((sum,element)=>{
+		var s=array.reduce((sum,element)=>{
             return sum+=element;
+		})
+		return array.map((element)=>{
+			return s-element;
 		})
 	}
 }
