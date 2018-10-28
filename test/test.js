@@ -1,6 +1,7 @@
 var assert=require('chai').assert;
 var recursion=require('../recursion');
 var sumOfOther=require('../sumOfOther');
+var make=require('../make');
 /*describe('recursion()',function(){
 	it('should return array of arrays with tree nodes',function(){
 	var tree={"value":100,"left":{"value":90,"left":{"value":70},"right":{"value":99}},
@@ -31,7 +32,7 @@ describe('recursion()',function(){
   var result=recursion.recursion(tree);
   assert.deepEqual(result,[[100]]);
     });
-});*/
+});
 describe('sumOfOther',function(){
   it('should return sum of other element of array',function(){
   var arr=[2,4,5,1,3,8];
@@ -51,5 +52,14 @@ describe('sumOfOther',function(){
   var arr=[2,4,5,1,3,52,3];
   var result=sumOfOther.sumOfOther(arr);
   assert.deepEqual(result,[68,66,65,69,67,18,67]);
+    });
+});*/
+
+describe('make()',function(){
+  it('should return chain function result',function(){
+  var arr=[2,4,5,1,3,52,3];
+  var sum=(a,b)=>{return a+b};
+  var result=make.make(4)(5)(3,5,1)(sum);
+  assert.deepEqual(result,[4,5,3,5,1]);
     });
 });
