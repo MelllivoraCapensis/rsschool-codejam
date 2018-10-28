@@ -3,7 +3,11 @@ module.exports={
 		if(isNaN(args[args.length-1]))
       {
         var arr=args.slice(0,args.length-1);
-        return arr;
+        var func=args[args.length-1];
+        var result=arr[0];
+        for(var i=1;i<arr.length;i++)
+           result=func(result,arr[i]);
+        return result;
       }
             
       var first_args=args;

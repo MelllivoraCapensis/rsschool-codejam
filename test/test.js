@@ -60,6 +60,6 @@ describe('make()',function(){
   var arr=[2,4,5,1,3,52,3];
   var sum=(a,b)=>{return a+b};
   var result=make.make(4)(5)(3,5,1)(sum);
-  assert.deepEqual(result,[4,5,3,5,1]);
+  assert.deepEqual(result,18);
     });
 });
