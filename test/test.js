@@ -63,3 +63,27 @@ describe('make()',function(){
   assert.deepEqual(result,18);
     });
 });
+describe('make()',function(){
+  it('should return chain function result',function(){
+  var arr=[2,4,5,1,3,52,3];
+  var differ=(a,b)=>{return a-b};
+  var result=make.make(14,6)(5)(3,5,1)(differ);
+  assert.deepEqual(result,-6);
+    });
+});
+describe('make()',function(){
+  it('should return chain function result',function(){
+  var arr=[2,4,5,1,3,52,3];
+  var prod=(a,b)=>{return a*b};
+  var result=make.make(2,3)(5)(3,5,1)(prod);
+  assert.deepEqual(result,450);
+    });
+});
+describe('make()',function(){
+  it('should return chain function result',function(){
+  var arr=[2,4,5,1,3,52,3];
+  var divide=(a,b)=>{return a/b};
+  var result=make.make(4)(5)(4,0.5,1)(divide);
+  assert.deepEqual(result,0.4);
+    });
+});
